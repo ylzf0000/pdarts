@@ -12,7 +12,10 @@ PRIMITIVES = [
     'dil_conv_3x3',
     'dil_conv_5x5'
 ]
-
+'''
+0代表c_{k-2}
+1代表c_{k-1}
+'''
 NASNet = Genotype(
     normal=[
         ('sep_conv_5x5', 1),
