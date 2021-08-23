@@ -157,6 +157,7 @@ class Network(nn.Module):
     def _initialize_alphas(self):
         k = sum(1 for i in range(self._steps) for n in range(2 + i))
         num_ops = self.switch_on
+        # 将网络架构alpha展开为k（混合边的总数） * num_ops（操作的总数） 的维度
         self.alphas_normal = nn.Parameter(torch.FloatTensor(1e-3 * np.random.randn(k, num_ops)))
         self.alphas_reduce = nn.Parameter(torch.FloatTensor(1e-3 * np.random.randn(k, num_ops)))
         self._arch_parameters = [

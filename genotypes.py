@@ -15,6 +15,7 @@ PRIMITIVES = [
 '''
 0代表c_{k-2}
 1代表c_{k-1}
+每一行依次代表每个结点的输入
 '''
 NASNet = Genotype(
     normal=[

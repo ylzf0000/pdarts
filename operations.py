@@ -87,6 +87,7 @@ class Zero(nn.Module):
     return x[:,:,::self.stride,::self.stride].mul(0.)
 '''
 
+# 返回一个全是0的tensor
 class Zero(nn.Module):
 
   def __init__(self, stride):
